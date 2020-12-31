@@ -1,0 +1,17 @@
+<h1><%= @home.name %></h1>
+
+<p><%= @home.description  %></p>
+
+<h2>Chores</h2>
+<%= render @home.chores %>
+
+<h2>Add a chore</h2>
+<%= render 'chores/form' %>
+
+<ul>
+  <li><%= link_to "Edit", edit_home_path(@home) %></li>
+  <li><%= link_to "Destroy", home_path(@home),
+     method: :delete,
+     data: { confirm: "Are you sure?" } %></li>
+  <li><%= link_to "Go back", homes_path %></li>
+</ul>

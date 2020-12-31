@@ -1,1 +1,12 @@
 <h1>Homes index page</h1>
+
+<ul>
+  <% @homes.each do |home| %>
+    <li>
+      <%= link_to home.name, home =%>
+    </li>
+  <% end  %>
+</ul>
+
+<%= link_to "Create a new home", new_home_path %>
+<%= link_to "Go back", root_path %>

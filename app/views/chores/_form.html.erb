@@ -1,0 +1,5 @@
+<%= form_with model: [@home, @home.chores.build] do |form| %>
+  <p><%= form.label :name %><%= form.text_field :name %></p>
+  <p><%= form.label :description %><%= form.text_area :description %></p>
+  <p><%= form.submit  %></p>
+<% end  %>

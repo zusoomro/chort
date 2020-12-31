@@ -1,1 +1,15 @@
 <h1>Welcome to Chort!</h1>
+
+<div>
+  <%= link_to "View homes", homes_path %>
+</div>
+  
+<div>
+<% if user_signed_in? %>
+  <%= link_to "View your profile", "/profile" %>
+<% else %>
+  <p>Use the links below to sign in or register.</p>
+  <%= link_to "Sign in", new_user_session_path %>
+  <%= link_to "Sign up", new_user_registration_path %>
+<% end %>
+</div>

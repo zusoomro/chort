@@ -1,0 +1,5 @@
+<h1>Profile page</h1>
+
+<p>You are currently logged in as <%= @user.email %>.</p>
+
+<%= link_to "Log out", destroy_user_session_path, method: :delete %>

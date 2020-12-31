@@ -1,0 +1,13 @@
+<p>
+  <strong>Name:</strong>
+  <%= chore.name %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%= chore.description %>
+</p>
+<p>
+  <%= link_to 'Delete this chore', [chore.home, chore],
+   method: :delete,
+   data: { confirm: "Are you sure?" } %>
+</p>

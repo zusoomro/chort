@@ -1,0 +1,20 @@
+#+TITLE: Chort
+
+A chore chart app.
+
+* User stores
+** TODO As a user, I can automatically assign chores
+** TODO As a user, I can select how frequently a chore needs to be done
+** TODO As a user, I can complete a chore
+** TODO As a user, I can see all completed chores for my home
+** TODO As a user, I can see my completed chores
+
+* Housekeeping
+** TODO Refactor Users Homes association to use a through table
+
+* Completed user stories
+** DONE As a user, I can register for the application
+** DONE As a user, I can log in to the application
+** DONE As a user, I can create a home
+** DONE As a user, I can join a home
+** DONE As a user, I can create a chore

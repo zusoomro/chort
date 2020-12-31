@@ -2,4 +2,9 @@
 
 <p>You are currently logged in as <%= @user.email %>.</p>
 
+<h2>Your homes</h2>
+<p><%= render @user.homes %></p>
+
 <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+
+

@@ -2,11 +2,25 @@
 
 <p><%= @home.description  %></p>
 
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
+
+<h2>People</h2>
+<%= render @home.users %>
+<h3>Join this Home</h3>
+<%= link_to "Join", add_user_path(@home.id, current_user.id), method: :post %>
+
 <h2>Chores</h2>
 <%= render @home.chores %>
 
 <h2>Add a chore</h2>
 <%= render 'chores/form' %>
+
+<h2>Assign chores</h2>
+<%= link_to "Assign", assign_chores_path(@home.id), method: :post %>
 
 <ul>
   <li><%= link_to "Edit", edit_home_path(@home) %></li>

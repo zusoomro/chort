@@ -1,4 +1,6 @@
 class HomesController < ApplicationController
+  before_action :authenticate_user!
+  
   def index
     @homes = Home.all
   end
@@ -40,6 +42,19 @@ class HomesController < ApplicationController
     @home.destroy
 
     redirect_to root_path
+  end
+
+  def add_user
+    @home = Home.find(params[:id])
+    @user = User.find(params[:user_id])
+
+    if @home.users.include? current_user
+      flash[:error] = "You are already a part of this home."
+    else
+      @home.users << @user
+    end
+
+    redirect_to @home
   end
 
   private
